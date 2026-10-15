@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "FileChanged": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"C:\\claude\\claude-nextjs-starterkit\\.claude\\hooks\\notify-mcp-json-change.js\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
@@ -24,9 +25,11 @@ export function MenuDemo() {
       <DropdownMenu>
         <DropdownMenuTrigger render={<Button variant="outline">메뉴 열기</Button>} />
         <DropdownMenuContent>
-          <DropdownMenuLabel>기본 항목</DropdownMenuLabel>
-          <DropdownMenuItem>프로필</DropdownMenuItem>
-          <DropdownMenuItem>설정</DropdownMenuItem>
+          <DropdownMenuGroup>
+            <DropdownMenuLabel>기본 항목</DropdownMenuLabel>
+            <DropdownMenuItem>프로필</DropdownMenuItem>
+            <DropdownMenuItem>설정</DropdownMenuItem>
+          </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
             checked={showStatusBar}
@@ -35,8 +38,8 @@ export function MenuDemo() {
             상태바 표시
           </DropdownMenuCheckboxItem>
           <DropdownMenuSeparator />
-          <DropdownMenuLabel>요금제</DropdownMenuLabel>
           <DropdownMenuRadioGroup value={plan} onValueChange={setPlan}>
+            <DropdownMenuLabel>요금제</DropdownMenuLabel>
             <DropdownMenuRadioItem value="free">Free</DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="pro">Pro</DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="team">Team</DropdownMenuRadioItem>
