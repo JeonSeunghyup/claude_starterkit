@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
@@ -29,7 +30,7 @@ export function ThemeToggle() {
                 <Moon className="absolute scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               </>
             ) : (
-              <Sun className="opacity-0" />
+              <Skeleton className="size-4 rounded-full" />
             )}
           </Button>
         }

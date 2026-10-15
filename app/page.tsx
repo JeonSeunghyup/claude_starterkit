@@ -1,6 +1,7 @@
+import Link from "next/link"
 import { Blocks, Moon, Paintbrush, Rocket } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardDescription,
@@ -10,6 +11,7 @@ import {
 import { Container } from "@/components/layout/container"
 import { Section } from "@/components/layout/section"
 import { NewsletterForm } from "@/components/newsletter-form"
+import { cn } from "@/lib/utils"
 
 const features = [
   {
@@ -51,10 +53,15 @@ export default function Home() {
             있어 아이디어를 바로 코드로 옮길 수 있습니다.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button size="lg">지금 시작하기</Button>
-            <Button size="lg" variant="outline">
-              문서 보기
-            </Button>
+            <Link href="/examples" className={cn(buttonVariants({ size: "lg" }))}>
+              컴포넌트 둘러보기
+            </Link>
+            <Link
+              href="#contact"
+              className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
+            >
+              뉴스레터 섹션으로 이동
+            </Link>
           </div>
         </Container>
       </Section>
